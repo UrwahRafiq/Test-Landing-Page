@@ -1,6 +1,7 @@
-const navButton = document.querySelector('#nav-toggle');
-const dropDown = document.querySelector('#dropdown');
+const navButton = document.getElementById('nav-toggle');
+const dropDown = document.getElementById('dropdown');
 
 navButton.addEventListener('click', () => {
     dropDown.classList.toggle('show');
+    console.log('clicked');
 });

@@ -77,6 +77,12 @@ html, body{
     color: rgb(206, 206, 206);
     line-height: 180%;
 }
+#dropdown{ 
+    display: none; 
+}
+#header #dropdown.show 
+{ display: block; 
+}
 
 /* SERVICES SECTION */
 #services{
@@ -271,12 +277,14 @@ html, body{
     #header{
         margin: 1rem;
         margin-top: 0;
+        padding-top: 1rem;
     }
     #sub-section{
         width: 100%;
         margin: 0;
         display: flex;
         flex-wrap: wrap;
+        padding-left: 1rem;
     }
     #nav-toggle{
         display: flex;
@@ -302,12 +310,10 @@ html, body{
     .nav-button{
         display: none;
     }
-    .show{
-        display: flex;
-    }
     /* quote */
     #quote{
         padding: 0;
+        width: 90%;
     }
     /* funnel */
     #Funnel{
@@ -319,6 +325,9 @@ html, body{
     }
     #view-services{
         margin: 1rem;
+    }
+    #Funnel #funnel-image{
+        justify-self: center;
     }
     /* contact form */
     #contact-form{
