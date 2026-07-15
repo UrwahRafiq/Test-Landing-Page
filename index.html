@@ -23,7 +23,8 @@
                     <h3><i class="fa-solid fa-arrow-down"></i>ARROW</h3>
                 </a>
                 <nav id="navbar">
-                    <ul>
+                    <button id="nav-toggle"><i class="fa-solid fa-bars"></i></button>
+                    <ul id="dropdown">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Our Services</a></li>
                         <li><a href="#">Testimonials</a></li>
@@ -76,7 +77,11 @@
 
         <div id="Funnel">
             <div id="funnel-image">
-                <img src="https://picsum.photos/id/2/620/485" alt="Random Image">
+                <picture>
+                    <source media="(max-width: 480px)" srcset="https://picsum.photos/id/2/360/282">
+                    <source media="(max-width: 1024px)" srcset="https://picsum.photos/id/2/420/360">
+                    <img src="https://picsum.photos/id/2/620/486" alt="Random Image">
+                </picture>
             </div>
             <div id="view-services">
                <i class="fa-solid fa-flask icon-color"></i>
