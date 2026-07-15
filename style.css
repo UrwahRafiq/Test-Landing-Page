@@ -1,0 +1,257 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Google Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+/* HEADER STYLES */
+#header #navbar{
+    display: flex;
+    align-items: center;
+}
+#header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 14rem;
+    font-size: 0.6rem;
+    padding-top: 1rem;
+}
+#navbar ul{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+#navbar{
+    gap: 2rem;
+}
+#header a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+/* BUTTON STYLES */
+.site-button{
+    background-color: #84eee7;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 1.3rem;
+    padding: 0.8rem 1rem;
+    font-size: 0.6rem;
+}
+.nav-button{
+    padding: 0.6rem 1rem !important;
+}
+
+/* HERO SECTION */
+#hero-section{
+    color: #FFFFFF;
+    height: 80vh;
+}
+#bg-image{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://picsum.photos/id/7/1300/700');
+    height: 100%;
+}
+#sub-section{
+    margin: 6rem 14rem;
+    text-align: left;
+    width: 30vw;
+}
+#sub-section h1{
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 140%;
+}
+#sub-section p{
+    font-weight: 100;
+    color: rgb(206, 206, 206);
+    line-height: 180%;
+}
+
+/* SERVICES SECTION */
+#services{
+    background-color: #F5F5F5;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem 14rem;
+    align-items: center;
+    justify-items: center;
+}
+#cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+.icon-color{
+    color: #84eee7;
+    font-size: 2rem;
+}
+.card h3{
+    font-weight: 400;
+}
+.card p{
+    font-size: 0.8rem;
+    color: gray;
+}
+
+/* QUOTE */
+#quote{
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 22rem;
+    text-align: center;
+}
+#quote h3{
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: grey;
+}
+#quote span{
+    color: black;
+}
+#quote p{
+    font-weight: 500;
+    font-size: 0.8rem;
+}
+
+/* FUNNEL SECTION */
+#Funnel{
+    background-color: #F5F5F5;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    justify-items: center;
+}
+#Funnel #view-services{
+    text-align: center;
+    padding: 2rem 16rem 4rem 4rem;
+}
+#view-services h2{
+    line-height: 140%;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+#view-services p{
+    line-height: 140%;
+    font-weight: 100;
+    font-size: 1rem;
+    color: gray;
+    letter-spacing: 5%;
+    padding-bottom: 1rem;
+}
+#funnel-image{
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* CONTACT FORM */
+#contact-form{
+    background-image: url('./images/dotted-world-map-white-background.avif');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 40%;
+    background-color: rgba(255, 255, 255, 0.7); 
+    background-blend-mode: lighten; 
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#contact-form #input-form{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+#input-form input{
+    padding: 0.8rem;
+    border: none;
+    background-color: #F5F5F5;
+    border-radius: 0.2rem;
+    font-size: 0.8rem;
+}
+#contact-button button{
+    border-radius: 0.2rem !important;
+    margin-top: 3rem;
+    padding: 0.7rem 3.2rem;
+}
+#contact-button p{
+    font-family: 'Patrick Hand', sans-serif;
+    color: rgb(37, 36, 36);
+    padding-left: 7rem;
+    margin-top: -2rem;
+}
+#contact-button span{
+    font-size: 3rem;
+}
+#contact-form h1{
+    font-weight: 500;
+    padding-top: 4rem;
+    font-size: 1.5rem;
+}
+#contact-form p{
+    color: gray;
+    font-size: 0.8rem;
+}
+
+/* TECH SECTION */
+#technologies{
+    background-color: #84eee7;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#technologies ul{
+    list-style: none;
+    display: flex;
+    gap: 5rem;
+}
+#technologies li{
+    font-size: 2.5rem;
+    color: #FFFFFF;
+}
+#envato-logo{
+    width: 2rem;
+    height: auto;
+    filter: brightness(0) invert(1);
+}
+
+/* FOOTER */
+#footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 30vh;
+    background-color: #F5F5F5;
+}
+#footer ul{
+    list-style: none;
+    display: flex;
+    gap: 0.5rem;
+}
+#footer a{
+    color: #FFFFFF;
+    background-color: #84eee7;
+    padding: 0.3rem;
+    border-radius: 50%;
+}
+#footer p{
+    color: grey;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+#footer p span{
+    color: black;
+}
