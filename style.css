@@ -280,7 +280,7 @@ html, body{
         padding-top: 1rem;
     }
     #hero-section{
-        height: 50vh;
+        height: auto;
     }
     #sub-section{
         width: 90% !important;
@@ -289,6 +289,7 @@ html, body{
         display: flex;
         flex-wrap: wrap;
         padding-left: 1rem;
+        padding-bottom: 3rem;
     }
     #nav-toggle{
         display: flex;
