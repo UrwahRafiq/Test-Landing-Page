@@ -274,7 +274,9 @@ html, body{
     }
     #sub-section{
         width: 100%;
-        margin: 1rem;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
     }
     #nav-toggle{
         display: flex;
@@ -294,10 +296,6 @@ html, body{
         padding: 1rem 0;
         margin: 1rem;
     }
-    /* #section-image{
-        width: 100vw;
-        height: auto;
-    } */
     #header #dropdown{
         display: none;
     }
@@ -315,10 +313,6 @@ html, body{
     #Funnel{
         height: auto;
         grid-template-columns: 1fr;
-    }
-    #funnel-image{
-        /* width: 40px;
-        height: auto; */
     }
     #Funnel #view-services{
         padding: 1rem;

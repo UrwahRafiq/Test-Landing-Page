@@ -44,7 +44,11 @@
 
         <div id="services">
             <div id="section-image">
-                <img src="https://picsum.photos/id/1/300/400" alt="Random Image">
+                <picture>
+                    <source media="(max-width: 480px)" srcset="https://picsum.photos/id/2/200/300">
+                    <source media="(max-width: 1024px)" srcset="https://picsum.photos/id/2/280/360">
+                    <img src="https://picsum.photos/id/1/300/400" alt="Random Image">
+                </picture>
             </div>
             <div id="cards">
                 <div class="card">
@@ -78,7 +82,7 @@
         <div id="Funnel">
             <div id="funnel-image">
                 <picture>
-                    <source media="(max-width: 480px)" srcset="https://picsum.photos/id/2/360/282">
+                    <source media="(max-width: 480px)" srcset="https://picsum.photos/id/2/290/282">
                     <source media="(max-width: 1024px)" srcset="https://picsum.photos/id/2/420/360">
                     <img src="https://picsum.photos/id/2/620/486" alt="Random Image">
                 </picture>
