@@ -89,7 +89,7 @@ html, body{
     background-color: #F5F5F5;
     height: 80vh;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 50% 50%;
     padding: 2rem 14rem;
     align-items: center;
     justify-items: center;
@@ -279,8 +279,11 @@ html, body{
         margin-top: 0;
         padding-top: 1rem;
     }
+    #hero-section{
+        height: 50vh;
+    }
     #sub-section{
-        width: 90%;
+        width: 90% !important;
         margin: 0;
         height: auto;
         display: flex;
@@ -314,7 +317,7 @@ html, body{
     /* quote */
     #quote{
         padding: 0;
-        width: 90%;
+        width: 100%;
     }
     /* funnel */
     #Funnel{
@@ -333,8 +336,8 @@ html, body{
     /* contact form */
     #contact-form{
         height: auto;
-        padding: 1rem;
-        width: 90%;
+        padding: 0;
+        width: 100%;
         flex-wrap: wrap;
         background-size: 100%;
     }
@@ -363,5 +366,24 @@ html, body{
     #header{
         margin: 1rem;
         margin-top: 0;
+    }
+    #services{
+        padding: 0;
+    }
+    #quote{
+        padding: 2rem;
+    }
+    #Funnel{
+        width: 100%
+    }
+    #Funnel #view-services{
+        padding: 0 5rem;
+    }
+    #contact-button p{
+        padding: 0;
+        margin: 0;
+    }
+    #contact-button button{
+        margin-top: 4rem;
     }
 }
