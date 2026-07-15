@@ -19,7 +19,7 @@ html, body{
     justify-content: space-between;
     align-items: center;
     margin: 0 14rem;
-    font-size: 0.6rem;
+    font-size: 0.8rem;
 }
 #navbar ul{
     list-style: none;
@@ -53,19 +53,24 @@ html, body{
 /* HERO SECTION */
 #hero-section{
     color: #FFFFFF;
-    height: 80vh;
+    height: 100vh;
 }
 #bg-image{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://picsum.photos/id/7/1300/700');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://picsum.photos/id/7/1300/700');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 100%;
 }
 #sub-section{
-    margin: 6rem 14rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
     text-align: left;
-    width: 30vw;
+    width: 35%;
+    height: 100%;
+    padding-left: 14rem;
 }
 #sub-section h1{
     font-size: 2.5rem;
@@ -82,6 +87,9 @@ html, body{
 }
 #header #dropdown.show 
 { display: block; 
+}
+#sub-section .site-button {
+    align-self: flex-start;
 }
 
 /* SERVICES SECTION */
@@ -141,7 +149,7 @@ html, body{
     background-color: #F5F5F5;
     height: 80vh;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
     justify-items: center;
 }
@@ -162,10 +170,14 @@ html, body{
     letter-spacing: 5%;
     padding-bottom: 1rem;
 }
-#funnel-image{
+#funnel-image picture, #funnel-image img{
+    display: block;
     width: 100%;
     height: auto;
     object-fit: contain;
+}
+#view-services{
+    padding: 1rem;
 }
 
 /* CONTACT FORM */
@@ -334,6 +346,10 @@ html, body{
     #Funnel #funnel-image{
         justify-self: center;
     }
+    #funnel-image img{
+        width: 100%;
+        height: auto;
+    }
     /* contact form */
     #contact-form{
         height: auto;
@@ -367,6 +383,10 @@ html, body{
     #header{
         margin: 1rem;
         margin-top: 0;
+    }
+    #sub-section{
+        padding-left: 5rem;
+        width: 50%;
     }
     #services{
         padding: 0;
