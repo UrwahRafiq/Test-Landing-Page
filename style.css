@@ -387,8 +387,9 @@ html, body{
         padding: 0;
         flex-direction: column;
         gap: 0 !important;
-        top: 3rem;
-        right: 2rem;
+        top: 3.5rem;
+        right: 1.5rem;
+        border-radius: 0.7rem;
     }
     #dropdown.show{
         display: flex !important;
