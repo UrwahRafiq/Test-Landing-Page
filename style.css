@@ -39,7 +39,7 @@ html, body{
 
 /* BUTTON STYLES */
 .site-button{
-    background-color: #84eee7;
+    background-color: #73d8d2;
     color: #FFFFFF;
     border: none;
     border-radius: 1.3rem;
@@ -81,12 +81,6 @@ html, body{
     font-weight: 100;
     color: rgb(206, 206, 206);
     line-height: 180%;
-}
-#dropdown{ 
-    display: none; 
-}
-#header #dropdown.show 
-{ display: block; 
 }
 #sub-section .site-button {
     align-self: flex-start;
@@ -233,7 +227,7 @@ html, body{
 
 /* TECH SECTION */
 #technologies{
-    background-color: #84eee7;
+    background-color: #73d8d2;
     height: 20vh;
     display: flex;
     justify-content: center;
@@ -270,7 +264,7 @@ html, body{
 }
 #footer a{
     color: #FFFFFF;
-    background-color: #84eee7;
+    background-color: #73d8d2;
     padding: 0.3rem;
     border-radius: 50%;
 }
@@ -283,8 +277,10 @@ html, body{
     color: black;
 }
 
+/* ANIMATIONS */
+
 /* MOBILE MEDIA QUERIES */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
     /* hero section */
     #header{
         margin: 1rem;
@@ -303,11 +299,39 @@ html, body{
         padding-left: 1rem;
         padding-bottom: 3rem;
     }
+    /* DROPDOWN MENU FOR MOBILE */
+    #dropdown{
+        display: none;
+        position: absolute;
+        background-color: #333;
+        z-index: 1;
+        padding: 0;
+        flex-direction: column;
+        gap: 0 !important;
+        top: 1rem;
+        right: 14rem;
+    }
+    #dropdown.show{
+        display: flex !important;
+    }
+    #dropdown li{
+        border-bottom: 1px solid #555;
+        padding: 1rem;
+    }
+    #dropdown li:last-child{
+        border-bottom: none; 
+        padding: 1rem;   
+    }
+    #dropdown li:hover{
+        background-color: #73d8d2;
+    }
     #nav-toggle{
         display: flex;
         border: none;
         background: transparent;
         color: #FFFFFF;
+        font-size: 1.5rem;
+        cursor: pointer;
     }
     /* services */
     #services{

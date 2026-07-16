@@ -12,6 +12,8 @@
    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Patrick+Hand&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
     <div id="landing-page">
@@ -29,12 +31,12 @@
                         <li><a href="#">Our Services</a></li>
                         <li><a href="#">Testimonials</a></li>
                         <li><a href="#">View Services</a></li>
-                        <a href="#">Signup Now</a>
+                        <li><a href="#">Signup Now</a></li>
                     </ul>
                     <button type="button" class="site-button nav-button">SIGN UP NOW</button>
                 </nav>
             </div>
-            <div id="sub-section">
+            <div id="sub-section" class="animate__animated animate__fadeInUp">
                 <h1>Let Us Do The Heavy Lifting For You</h1>
                 <p>This should be used to tell a story and let your users know a little more about your product or service.</p>
                 <button class="site-button">SIGN UP NOW!</button>
@@ -42,7 +44,7 @@
             </div>
         </div>
 
-        <div id="services">
+        <div id="services" class="animate__animated animate__fadeIn">
             <div id="section-image">
                 <picture>
                     <source media="(max-width: 480px)" srcset="https://picsum.photos/id/2/200/300">
@@ -104,7 +106,7 @@
                 <input type="number" placeholder="Phone Number">
                 <div id="contact-button">
                     <button type="submit" class="site-button">SEND NOW!</button>
-                    <p>Sign up Now! <span>&#x2923;</span></p>
+                    <p>Sign up Now! <span>&#x2923;</span></p> <!-- unicode symbol -->
                 </div>
             </form>
         </div>
