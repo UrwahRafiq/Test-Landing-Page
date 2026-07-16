@@ -13,7 +13,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Patrick+Hand&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script defer src="./app.js"></script>
 </head>
 <body>
     <div id="landing-page">
@@ -36,16 +39,16 @@
                     <button type="button" class="site-button nav-button">SIGN UP NOW</button>
                 </nav>
             </div>
-            <div id="sub-section" class="animate__animated animate__fadeInUp">
-                <h1>Let Us Do The Heavy Lifting For You</h1>
-                <p>This should be used to tell a story and let your users know a little more about your product or service.</p>
-                <button class="site-button">SIGN UP NOW!</button>
+            <div id="sub-section">
+                <h1 data-aos="fade-up" data-aos-delay="200">Let Us Do The Heavy Lifting For You</h1>
+                <p data-aos="fade-up" data-aos-delay="300">This should be used to tell a story and let your users know a little more about your product or service.</p>
+                <button class="site-button" data-aos="fade-up" data-aos-delay="400">SIGN UP NOW!</button>
             </div>
             </div>
         </div>
 
-        <div id="services" class="animate__animated animate__fadeIn">
-            <div id="section-image">
+        <div id="services">
+            <div id="section-image" data-aos="fade-right" data-aos-delay="200">
                 <picture>
                     <source media="(max-width: 480px)" srcset="https://picsum.photos/id/2/200/300">
                     <source media="(max-width: 1024px)" srcset="https://picsum.photos/id/2/280/360">
@@ -53,22 +56,22 @@
                 </picture>
             </div>
             <div id="cards">
-                <div class="card">
+                <div class="card" data-aos="flip-up" data-aos-delay="400">
                     <i class="fa-regular fa-lightbulb icon-color"></i>
                     <h3>Developing</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, voluptates.</p>
                 </div>
-                <div class="card">
+                <div class="card" data-aos="flip-up" data-aos-delay="400">
                     <i class="fa-solid fa-pen-ruler icon-color"></i>
                     <h3>Branding</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, voluptates.</p>
                 </div>
-                <div class="card">
+                <div class="card" data-aos="flip-up" data-aos-delay="400">
                     <i class="fa-solid fa-layer-group icon-color"></i>
                     <h3>Designing</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, voluptates.</p>
                 </div>
-                <div class="card">
+                <div class="card" data-aos="flip-up" data-aos-delay="400">
                     <i class="fa-regular fa-chess-knight icon-color"></i>
                     <h3>Marketing</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, voluptates.</p>
@@ -76,20 +79,20 @@
             </div>
         </div>
 
-        <div id="quote">
+        <div id="quote" data-aos="zoom-in" data-aos-delay="400">
             <h3>"We are excited to launch our new service, By using <span>Arrow template</span> it has great features, it is the next generation of Landing Pages."</h3>
             <p>- Mark Smith, Envato Client</p>
         </div>
 
         <div id="Funnel">
-            <div id="funnel-image">
+            <div id="funnel-image" data-aos="fade-right" data-aos-delay="600">
                 <picture>
                     <source media="(max-width: 480px)" srcset="https://picsum.photos/id/2/290/282">
                     <source media="(max-width: 1024px)" srcset="https://picsum.photos/id/2/420/360">
                     <img src="https://picsum.photos/id/2/628/484" alt="Random Image">
                 </picture>
             </div>
-            <div id="view-services">
+            <div id="view-services"  data-aos="fade-left" data-aos-delay="700">
                <i class="fa-solid fa-flask icon-color"></i>
                <h2>The Soul of Our Work is Creativity</h2>
                <p>This should be used to tell a story and let your users know a little more about your product or service.</p>
@@ -97,7 +100,7 @@
             </div>
         </div>
 
-        <div id="contact-form">
+        <div id="contact-form" data-aos="fade-up" data-aos-delay="400">
             <h1>Sign Up Now For Free</h1>
             <p>This should be used to tell a story and talk about your product.</p>
             <form action="" method="post" id="input-form">
@@ -106,13 +109,13 @@
                 <input type="number" placeholder="Phone Number">
                 <div id="contact-button">
                     <button type="submit" class="site-button">SEND NOW!</button>
-                    <p>Sign up Now! <span>&#x2923;</span></p> <!-- unicode symbol -->
+                    <p data-aos="zoom-in-up" data-aos-delay="500">Sign up Now! <span>&#x2923;</span></p> <!-- unicode symbol -->
                 </div>
             </form>
         </div>
 
         <div id="technologies">
-            <ul>
+            <ul data-aos="zoom-out-up" data-aos-delay="400">
                 <li><i class="fa-brands fa-apple"></i></li>
                 <li><i class="fa-brands fa-spotify"></i></li>
                 <li><i class="fa-brands fa-sass"></i></li>
@@ -123,7 +126,7 @@
         </div>
 
         <div id="footer">
-            <ul>
+            <ul data-aos="fade-right" data-aos-delay="400">
                 <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
                 <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
                 <li><a href="#"><i class="fa-brands fa-behance"></i></a></li>
