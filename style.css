@@ -301,7 +301,7 @@ html, body{
 .group{
     display: flex;
     flex-shrink: 0;
-    animation: scroll 10s linear infinite;
+    animation: scroll 5s linear infinite;
 }
 .group ul{
     list-style: none;
@@ -326,7 +326,7 @@ html, body{
 /* both groups take up 50% width */
 @keyframes scroll {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-60%); }
+    100% { transform: translateX(-50%); }
 }
 
 /* FOOTER */
