@@ -3,63 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
+    <title>Arrow</title>
 
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="./style.css">
 
+    <!-- Icons -->
     <script defer src="https://kit.fontawesome.com/06a75af666.js" crossorigin="anonymous"></script>
 
-   <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+    <!-- AOS Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+    <!--   JS File   -->
     <script defer src="./app.js"></script>
 </head>
 <body>
     <div id="landing-page">
 
+        <div class="nav-wrapper">
+                <div class="indicator"></div>
+                <div id="header">
+                    <a href="#" id="logo">
+                        <img src="./images/logo-header.webp" alt="header logo">
+                    </a>
+                    <nav id="navbar">
+                        <button id="nav-toggle"><i class="fa-solid fa-bars"></i></button>
+                        <ul id="dropdown">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#services">Our Services</a></li>
+                            <li><a href="#quote">Testimonials</a></li>
+                            <li><a href="#Funnel">View Services</a></li>
+                            <li><a href="#contact-form">Signup Now</a></li>
+                        </ul>
+                        <button type="button" class="site-button nav-button">SIGN UP NOW</button>
+                    </nav>
+                </div>
+            </div>
+
         <div id="hero-section">
-            <div id="bg-image">
-            <div id="header">
-                <a href="#" id="logo">
-                    <h3><i class="fa-solid fa-arrow-down"></i>ARROW</h3>
-                </a>
-                <nav id="navbar">
-                    <button id="nav-toggle"><i class="fa-solid fa-bars"></i></button>
-                    <ul id="dropdown">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Our Services</a></li>
-                        <li><a href="#">Testimonials</a></li>
-                        <li><a href="#">View Services</a></li>
-                        <li><a href="#">Signup Now</a></li>
-                    </ul>
-                    <button type="button" class="site-button nav-button">SIGN UP NOW</button>
-                </nav>
-            </div>
-            <div id="sub-section">
-                <h1 data-aos="fade-up" data-aos-delay="200">Let Us Do The Heavy Lifting For You</h1>
-                <p data-aos="fade-up" data-aos-delay="300">This should be used to tell a story and let your users know a little more about your product or service.</p>
-                <button class="site-button" data-aos="fade-up" data-aos-delay="400">SIGN UP NOW!</button>
-            </div>
+            <div class="clipping-wrapper">
+                <div id="bg-image">
+                <div id="sub-section">
+                        <h1 data-aos="fade-up" data-aos-delay="200">Let Us Do The Heavy Lifting For You</h1>
+                        <p data-aos="fade-up" data-aos-delay="300">This should be used to tell a story and let your users know a little more about your product or service.</p>
+                        <button class="site-button" data-aos="fade-up" data-aos-delay="400">SIGN UP NOW!</button>
+                </div>
+                </div>
             </div>
         </div>
 
         <div id="services">
             <div id="section-image" data-aos="fade-right" data-aos-delay="200">
-                <picture>
-                    <source media="(max-width: 480px)" srcset="https://picsum.photos/id/2/200/300">
-                    <source media="(max-width: 1024px)" srcset="https://picsum.photos/id/2/280/360">
-                    <img src="https://picsum.photos/id/1/300/400" alt="Random Image">
-                </picture>
+                <img src="./images/letter.webp" alt="big letter image">
             </div>
             <div id="cards">
                 <div class="card" data-aos="flip-up" data-aos-delay="400">
-                    <i class="fa-regular fa-lightbulb icon-color"></i>
-                    <h3>Developing</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, voluptates.</p>
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <i class="fa-regular fa-lightbulb icon-color"></i>
+                            <h3>Developing</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, voluptates.</p>
+                        </div>
+                        <div class="card-back">
+                            <p>Hello!</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="card" data-aos="flip-up" data-aos-delay="400">
                     <i class="fa-solid fa-pen-ruler icon-color"></i>
@@ -80,40 +94,38 @@
         </div>
 
         <div id="quote" data-aos="zoom-in" data-aos-delay="400">
-            <div class="slider-container">
-                <div class="slider-track">
-                    <div class="testimonial">
-                        <h3>"We are excited to launch our new service, By using <span>Arrow template</span> it has great features, it is the next generation of Landing Pages."</h3>
-                        <p>- Mark Smith, Envato Client</p>
+            <div class="clipping-wrapper">
+                <div class="slider-container">
+                    <div class="slider-track">
+                        <div class="testimonial">
+                            <h3>"We are excited to launch our new service, By using <span>Arrow template</span> it has great features, it is the next generation of Landing Pages."</h3>
+                            <p>- Mark Smith, Envato Client</p>
+                        </div>
+                        <div class="testimonial">
+                            <h3>"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis, beatae nemo. Ab aut neque vitae corporis omnis, quasi vel similique."</h3>
+                            <p>- John Doe</p>
+                        </div>
+                        <div class="testimonial">
+                            <h3>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, architecto eligendi. Optio at molestias suscipit."</h3>
+                            <p>- Jane Doe</p>
+                        </div>
                     </div>
-                    <div class="testimonial">
-                        <h3>"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis, beatae nemo. Ab aut neque vitae corporis omnis, quasi vel similique."</h3>
-                        <p>- John Doe</p>
+                    <div class="slider-controls">
+                    <button class="prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                    <div class="dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
                     </div>
-                    <div class="testimonial">
-                        <h3>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, architecto eligendi. Optio at molestias suscipit."</h3>
-                        <p>- Jane Doe</p>
+                        <button class="next-btn"><i class="fa-solid fa-chevron-right"></i></button>
                     </div>
-                </div>
-                <div class="slider-controls">
-                <button class="prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
-                <div class="dots">
-                    <span class="dot active"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                </div>
-                    <button class="next-btn"><i class="fa-solid fa-chevron-right"></i></button>
                 </div>
             </div>
         </div>
 
         <div id="Funnel">
             <div id="funnel-image" data-aos="fade-right" data-aos-delay="600">
-                <picture>
-                    <source media="(max-width: 480px)" srcset="https://picsum.photos/id/2/290/282">
-                    <source media="(max-width: 1024px)" srcset="https://picsum.photos/id/2/420/360">
-                    <img src="https://picsum.photos/id/2/628/484" alt="Random Image">
-                </picture>
+                <img src="./images/img-3.webp" alt="funnel image">
             </div>
             <div id="view-services"  data-aos="fade-left" data-aos-delay="700">
                <i class="fa-solid fa-flask icon-color"></i>
@@ -132,7 +144,9 @@
                 <input type="number" placeholder="Phone Number">
                 <div id="contact-button">
                     <button type="submit" class="site-button">SEND NOW!</button>
-                    <p data-aos="zoom-in-up" data-aos-delay="450">Sign up Now! <span>&#x2923;</span></p> <!-- unicode symbol -->
+                    <br>
+                    <img src="./images/signup-form.webp" alt="sign up arrow">
+                    <!-- <p data-aos="zoom-in-up" data-aos-delay="450">Sign up Now! <span>&#x2923;</span></p> unicode symbol -->
                 </div>
             </form>
         </div>
@@ -140,18 +154,7 @@
         <div id="technologies">
             <div class="carousel">
                 <div class="group">
-                    <ul>
-                        <li><i class="fa-brands fa-apple"></i></li>
-                        <li><i class="fa-brands fa-spotify"></i></li>
-                        <li><i class="fa-brands fa-sass"></i></li>
-                        <li><i class="fa-brands fa-github"></i></li>
-                        <li><i class="fa-brands fa-less"></i></li>
-                        <li><img src="./images/envato-512x512.png" alt="envato logo" id="envato-logo"></li>
-                    </ul>
-                </div>
-                <!-- DUPLICATE FOR LOOPING -->
-                <div class="group">
-                    <ul>
+                    <ul id="marquee">
                         <li><i class="fa-brands fa-apple"></i></li>
                         <li><i class="fa-brands fa-spotify"></i></li>
                         <li><i class="fa-brands fa-sass"></i></li>

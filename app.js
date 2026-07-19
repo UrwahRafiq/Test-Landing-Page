@@ -1,3 +1,21 @@
+// indicator logic
+const indicator = document.querySelector('.indicator');
+
+// documentElement -> <html> tag
+// total height of webpage - size of viewport
+const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+window.addEventListener('scroll', () => {
+
+    const percentage = (scrollY / docHeight) * 100;
+
+    indicator.style.width = percentage + '%';
+});
+
+// marquee
+const marquee = document.getElementById('marquee');
+marquee.innerHTML += marquee.innerHTML;
+
 const navButton = document.getElementById('nav-toggle');
 const dropDown = document.getElementById('dropdown');
 
