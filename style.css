@@ -24,6 +24,46 @@ p {
 :root{
     --text-color: #88ddd6;
 }
+/* preloader */
+#preloader{
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.4s ease-in-out;
+}
+#preloader-page{
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--text-color);
+    z-index: 998;
+    transition: transform 1s ease-in-out;
+}
+.preloader-swipe-up{
+    transform: translateY(-100%);
+}
+.percentage{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+.progress-bar-container{
+    width: 100%;
+    height: 0.2rem;
+}
+.progress-bar{
+    width: 0%;
+    height: 100%;
+    background-color: var(--text-color);
+    transition: width 0.1s ease-out;
+}
 
 /* indicator */
 .nav-wrapper{
@@ -43,7 +83,7 @@ p {
 /* HEADER STYLES */
 #header #navbar{
     display: flex;
-    align-items: center;
+    align-items: ce nter;
 }
 #header{
     display: flex;
@@ -211,7 +251,7 @@ p {
 #cards{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    gap: 4rem;
     width: 90%;
 }
 .icon-color{
@@ -233,8 +273,8 @@ p {
 /* Card flip animation */
 .card{
     background-color: #F5F5F5;
-    border-radius: 0.5;
-    padding: 2rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
     transition: all 0.3s ease;
     perspective: 62.5rem;
     height: 15.625rem;
@@ -251,9 +291,11 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 1rem;
 }
 .card:hover .card-inner{
     transform: rotateY(180deg);
+    box-shadow: 0rem 0.5rem 0.5rem #c4c4c4;
 }
 .card-front .card-back{
     position: absolute;
@@ -261,7 +303,7 @@ p {
 .card-front{
     z-index: 2;
     background-color: #F5F5F5;
-    backface-visibility: hidden; 
+    backface-visibility: hidden;
 }
 .card-back{
     transform: rotateY(180deg);
@@ -457,7 +499,7 @@ p {
 /* TECH SECTION */
 #technologies{
     background-color: var(--text-color);
-    height: 20vh;
+    height: 35vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -467,7 +509,11 @@ p {
 .carousel{
     display: flex;
     width: max-content;
-    animation: scroll 10s linear infinite;
+    animation: scroll 40s linear infinite;
+    animation-play-state: paused;
+}
+.carousel.animate{
+    animation-play-state: running;
 }
 .group{
     display: flex;
@@ -481,7 +527,7 @@ p {
     align-items: center;
 }
 #technologies li{
-    font-size: 10rem;
+    font-size: 5rem;
     color: #FFFFFF;
     /* prevents line from automatically breaking to new line */
     white-space: nowrap;
@@ -501,6 +547,7 @@ p {
 #footer{
     text-align: center;
     padding: 6.25rem 0 6.25rem;
+    height: 25vh;
 }
 #footer ul{
     list-style: none;
@@ -542,8 +589,10 @@ p {
     }
     /* hero section */
     #header{
-        max-width: 100%;
-        gap: 9rem;
+        gap: 40%;
+        padding: 1rem;
+        height: auto;
+        position: relative;
     }
     #hero-section{
         height: 98vh;
@@ -565,23 +614,31 @@ p {
         font-size: 2.3rem;
     }
     /* DROPDOWN MENU FOR MOBILE */
+    #navbar{
+        position: relative;
+    }
     #dropdown{
         display: none;
         position: absolute;
-        background-color: var(--text-color);
-        z-index: 1;
+        background-color: white;
+        z-index: 20;
         padding: 0;
         flex-direction: column;
         gap: 0 !important;
-        top: 3.5rem;
-        right: 1.5rem;
-        border-radius: 0.7rem;
+        min-width: 100vw;
+        width: 100vw;
+        top: 2rem;
+        left: 0;
+        transform: translateX(-85%);
     }
     #dropdown.show{
         display: flex !important;
     }
+    #dropdown a{
+        color: black;
+    }
     #dropdown li{
-        border-bottom: 1px solid #555;
+        border-bottom: 1px solid #acabab;
         padding: 1rem;
     }
     #dropdown li:last-child{
@@ -676,6 +733,9 @@ p {
     #contact-button #contact-btn{
         margin: 0;
         padding: 1rem 9.5rem !important;
+        position: relative;
+        top: 0;
+        left: 2.3rem;
     }
     #contact-form h1{
         padding-top: 0;
@@ -704,13 +764,15 @@ p {
     #header{
         /* margin: 1rem; */
         margin-top: 0;
+        position: relative;
     }
     #nav-toggle{
         display: flex;
         border: none;
         background: transparent;
         color: #FFFFFF;
-        font-size: 1.5rem;
+        font-size: 2rem;
+        padding-top: 0.5rem;
         cursor: pointer;
     }
     .header-scrolled #nav-toggle{
@@ -719,18 +781,19 @@ p {
     /* dropdown menu for tablet */
     #navbar ul{
         display: none;
+
     }
     #dropdown{
         display: none;
         position: absolute;
-        background-color: var(--text-color);
+        background-color: white;
         z-index: 1;
         padding: 0;
         flex-direction: column;
         gap: 0 !important;
-        top: 3.5rem;
-        right: 1.5rem;
-        border-radius: 0.7rem;
+        top: 4rem;
+        left: 0;
+        min-width: 100vw;
     }
     #dropdown.show{
         display: flex !important;
@@ -738,6 +801,9 @@ p {
     #dropdown li{
         border-bottom: 1px solid #555;
         padding: 1rem;
+    }
+    #dropdown li a{
+        color: black;
     }
     #dropdown li:last-child{
         border-bottom: none; 

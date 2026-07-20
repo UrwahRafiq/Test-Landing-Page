@@ -1,3 +1,43 @@
+// preloader animation
+window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    const perText = document.querySelector('.percentage');
+    const progressBar = document.querySelector('.progress-bar');
+    const page2 = document.querySelector('#preloader-page');
+
+    // current percentage
+    let p = 0;
+
+    // animation till page loads
+    // runs code again and again with a specified time gap
+    const interval = setInterval(() => {
+        if (p < 100) {
+            p++;
+            perText.textContent = `Loading ${p}%`;
+            progressBar.style.width = p + '%';
+        }
+        else {
+            clearInterval(interval);
+
+            // add class to swipe up
+            preloader.classList.add('preloader-swipe-up');
+            page2.classList.add('preloader-swipe-up');
+        }
+    }, 15);
+
+    // start carsousel animation when section is in view
+    // set a timer for this code to run
+    setTimeout(() => {
+        const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            document.querySelector('.carousel').classList.toggle('animate', entry.isIntersecting);
+         });
+        }, { threshold: 0.2 });
+
+    observer.observe(document.getElementById('technologies'));
+        }, 100);
+});
+
 // scroll animation for header
 window.addEventListener('scroll', () => {
     const header = document.getElementById('header');
