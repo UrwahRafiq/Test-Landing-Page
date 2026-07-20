@@ -1,3 +1,52 @@
+// scroll animation for header
+window.addEventListener('scroll', () => {
+    const header = document.getElementById('header');
+    if(window.scrollY > 0) {
+        header.classList.add('header-scrolled');
+    }
+    else {
+        header.classList.remove('header-scrolled');
+    }
+});
+
+// scrollspy 
+const navLinks = document.querySelectorAll('#dropdown li a');
+
+window.addEventListener('scroll',() => {
+    // scroll position
+    let s = window.scrollY + 150; //150px buffer
+
+    if (s < 200) {
+        navLinks.forEach(l => l.classList.remove('active'));
+        return;
+    }
+
+    navLinks.forEach(link => {
+        //                 #about               "about"
+        const secID = link.getAttribute('href').substring(1);
+        // looks for a section with that specific id
+        const section = document.getElementById(secID);
+
+        if (section) {
+            const secTop = section.offsetTop;
+            const secHeight = section.offsetHeight;
+
+            if (s >= secTop && s < (secTop + secHeight)) {
+                navLinks.forEach(l => l.classList.remove('active'));
+                link.classList.add('active');
+            }
+        }
+    })
+});
+
+// hero section parallax
+window.addEventListener('scroll', () => {
+    const heroSection = document.getElementById('bg-image');
+    let scrollPos = window.scrollY;
+
+    heroSection.style.setProperty('--y-offset', `${scrollPos * 0.5}px`);
+});
+
 // indicator logic
 const indicator = document.querySelector('.indicator');
 
