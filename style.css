@@ -528,10 +528,18 @@ p {
     align-items: center;
     /* overflow: hidden; */
 }
+/* outer boundary */
+.carousel-container{
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+}
+/* moving track */
 .carousel{
     display: flex;
     width: max-content;
-    animation: scroll 40s linear infinite;
+    animation: scroll 10s linear infinite;
     animation-play-state: paused;
 }
 .carousel.animate{
@@ -544,17 +552,20 @@ p {
     list-style: none;
     display: flex;
     gap: 10rem;
-    padding: 0 2.5rem;
+    padding: 0 5rem;
     margin: 0;
     align-items: center;
+    width: max-content;
 }
 #technologies li{
     font-size: 5rem;
     color: #FFFFFF;
     /* prevents line from automatically breaking to new line */
     white-space: nowrap;
+    /* this fixed the slider, even when space is low no shrinking allowed, this prevents the clipping */
+    flex-shrink: 0;
 }
-#envato-logo{
+.envato-logo{
     width: 4rem;
     height: auto;
     filter: brightness(0) invert(1);
@@ -644,14 +655,26 @@ p {
         position: absolute;
         background-color: white;
         z-index: 20;
-        padding: 0;
+        padding: 0.25rem;
         flex-direction: column;
         gap: 0 !important;
         min-width: 100vw;
         width: 100vw;
-        top: 2rem;
+        top: 2.5rem;
         left: 0;
         transform: translateX(-85%);
+        animation: dropdownFade 0.25s ease forwards;
+        margin: 0;
+    }
+    @keyframes dropdownFade {
+        from {
+            opacity: 0;
+            transform: translateX(-85%) translateY(-0.5rem);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(-85%) translateY(0);
+        }
     }
     #dropdown.show{
         display: flex !important;
@@ -660,12 +683,12 @@ p {
         color: black;
     }
     #dropdown li{
-        border-bottom: 1px solid #acabab;
-        padding: 1rem;
+        border-bottom: 0.5px solid #acabab;
+        padding: 0.75rem 1rem;
     }
     #dropdown li:last-child{
         border-bottom: none; 
-        padding: 1rem;   
+        padding: 0.5rem 1rem;   
     }
     .nav-toggle{
         display: flex;
@@ -821,7 +844,7 @@ p {
         display: flex !important;
     }
     #dropdown li{
-        border-bottom: 1px solid #555;
+        border-bottom: 0.5px solid #555;
         padding: 1rem;
     }
     #dropdown li a{

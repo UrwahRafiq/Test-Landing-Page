@@ -133,8 +133,13 @@ const navButton = document.querySelector('#menu-icon');
 const crossBtn = document.querySelector('#cross-icon');
 const dropDown = document.getElementById('dropdown');
 
+function isMobile() {
+    return window.innerWidth < 1078;
+}
+
 // toggle dropdown on click of nav button
 navButton.addEventListener('click', (e) => {
+    if (!isMobile()) return;
     // prevents event from travelling any further up or down the DOM tree
     e.stopPropagation();
     dropDown.classList.toggle('show');
@@ -143,6 +148,7 @@ navButton.addEventListener('click', (e) => {
 });
 
 crossBtn.addEventListener('click', (e) => {
+    if (!isMobile()) return;
     e.stopPropagation();
     dropDown.classList.remove('show');
     crossBtn.style.display = 'none';
@@ -151,6 +157,7 @@ crossBtn.addEventListener('click', (e) => {
 
 // close dropdown when clicking a link
 dropDown.querySelectorAll('a').forEach(link => {
+    if (!isMobile()) return;
     link.addEventListener('click', () => {
         dropDown.classList.remove('show');
         crossBtn.style.display = 'none';
@@ -160,12 +167,15 @@ dropDown.querySelectorAll('a').forEach(link => {
 
 // close dropdown when clicking outside
 document.addEventListener('click', (e) => {
+    if (!isMobile()) return;
     if(!navButton.contains(e.target) && !dropDown.contains(e.target)) {
         dropDown.classList.remove('show');
         crossBtn.style.display = 'none';
         navButton.style.display = 'block';
     }
 });
+
+
 
 // Initialize AOS (Animate On Scroll) Lib
 document.addEventListener('DOMContentLoaded', () => {
@@ -251,4 +261,20 @@ document.addEventListener('DOMContentLoaded', () => {
     quoteSection.addEventListener('mouseleave', startAutoplay);
 
     startAutoplay();
+});
+
+// form validation
+document.getElementById('input-form').addEventListener('submit', (e) => {
+    e.preventDefault(); //prevents page from crashing
+
+    const form = e.target;
+
+    alert('form submitted!');
+    console.log('form data;',
+        {
+            name: form.querySelector('#name').value,
+            email: form.querySelector('#email').value,
+            phone: form.querySelector('#phoneno').value
+        }
+    );
 });

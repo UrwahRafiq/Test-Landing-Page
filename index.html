@@ -182,10 +182,11 @@
         <div id="contact-form" data-aos="fade-up" data-aos-delay="400">
             <h1>Sign Up Now For Free</h1>
             <p>This should be used to tell a story and talk about your product.</p>
-            <form action="" method="post" id="input-form">
-                <input type="text" placeholder="Your Name">
-                <input type="email" placeholder="Your Email">
-                <input type="number" placeholder="Phone Number">
+            <form action="" method="" id="input-form" novalidate>
+                <!-- novalidate: hide browser error popups -->
+                <input type="text" placeholder="Your Name" name="name" id="name" required>
+                <input type="email" placeholder="Your Email" name="email" id="email" required>
+                <input type="number" placeholder="Phone Number" name="phoneno" id="phoneno" required>
                 <div id="contact-button">
                     <button type="submit" id="contact-btn" class="site-button">SEND NOW!</button>
                     <br>
@@ -195,16 +196,24 @@
         </div>
 
         <div id="technologies">
-            <div class="carousel">
-                <div class="group">
-                    <ul id="marquee">
-                        <li><i class="fa-brands fa-apple"></i></li>
-                        <li><i class="fa-brands fa-spotify"></i></li>
-                        <li><i class="fa-brands fa-sass"></i></li>
-                        <li><i class="fa-brands fa-github"></i></li>
-                        <li><i class="fa-brands fa-less"></i></li>
-                        <li><img src="./images/envato-512x512.png" alt="envato logo" id="envato-logo"></li>
-                    </ul>
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="group">
+                        <ul id="marquee">
+                            <li><i class="fa-brands fa-apple"></i></li>
+                            <li><i class="fa-brands fa-spotify"></i></li>
+                            <li><i class="fa-brands fa-sass"></i></li>
+                            <li><i class="fa-brands fa-github"></i></li>
+                            <li><i class="fa-brands fa-less"></i></li>
+                            <li><img src="./images/envato-512x512.png" alt="envato logo" class="envato-logo"></li>
+                            <li aria-hidden="true"><i class="fa-brands fa-apple"></i></li>
+                            <li aria-hidden="true"><i class="fa-brands fa-spotify"></i></li>
+                            <li aria-hidden="true"><i class="fa-brands fa-sass"></i></li>
+                            <li aria-hidden="true"><i class="fa-brands fa-github"></i></li>
+                            <li aria-hidden="true"><i class="fa-brands fa-less"></i></li>
+                            <li aria-hidden="true"><img src="./images/envato-512x512.png" alt="envato logo" class="envato-logo"></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
