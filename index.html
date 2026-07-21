@@ -26,6 +26,7 @@
 <body>
     <div id="landing-page">
 
+
         <div id="preloader">
             <div class="loader-content">
                 <img src="./images/logo-header.webp" alt="header logo">
@@ -44,7 +45,8 @@
                         <img src="./images/logo-header.webp" alt="header logo">
                     </a>
                     <nav id="navbar">
-                        <button id="nav-toggle"><i class="fa-solid fa-bars"></i></button>
+                        <button class="nav-toggle" id="menu-icon"><i class="fa-solid fa-bars"></i></button>
+                        <button class="nav-toggle" id="cross-icon"><i class="fa-solid fa-x"></i></button>
                         <ul id="dropdown">
                             <li><a href="#hero-section" class="navlink">Home</a></li>
                             <li><a href="#services" class="navlink">Our Services</a></li>
@@ -68,13 +70,15 @@
                 </div>
             </div>
         </div>
+       
+        <div class="back-to-top"><a href="#hero-section"><i class="fa-solid fa-angle-up"></i></a></div>
 
         <div id="services">
             <div id="section-image" data-aos="fade-right" data-aos-delay="200">
                 <img src="./images/letter.webp" alt="big letter image">
             </div>
             <div id="cards">
-                <div class="card" data-aos="flip-up" data-aos-delay="400">
+                <div class="card" data-aos="flip-up" data-aos-delay="200">
                     <div class="card-inner">
                         <div class="card-front">
                             <i class="fa-regular fa-lightbulb icon-color"></i>
@@ -88,7 +92,7 @@
                     </div>
                 </div>
                 
-                <div class="card" data-aos="flip-up" data-aos-delay="500">
+                <div class="card" data-aos="flip-up" data-aos-delay="200">
                     <div class="card-inner">
                         <div class="card-front">
                             <i class="fa-solid fa-pen-ruler icon-color"></i>
@@ -102,7 +106,7 @@
                     </div>
                 </div>
                 
-                <div class="card" data-aos="flip-up" data-aos-delay="600">
+                <div class="card" data-aos="flip-up" data-aos-delay="200">
                     <div class="card-inner">
                         <div class="card-front">
                             <i class="fa-solid fa-layer-group icon-color"></i>
@@ -116,7 +120,7 @@
                     </div>
                 </div>
                 
-                <div class="card" data-aos="flip-up" data-aos-delay="700">
+                <div class="card" data-aos="flip-up" data-aos-delay="200">
                     <div class="card-inner">
                         <div class="card-front">
                             <i class="fa-regular fa-chess-knight icon-color"></i>
@@ -186,7 +190,6 @@
                     <button type="submit" id="contact-btn" class="site-button">SEND NOW!</button>
                     <br>
                     <img src="./images/signup-form.webp" alt="sign up arrow">
-                    <!-- <p data-aos="zoom-in-up" data-aos-delay="450">Sign up Now! <span>&#x2923;</span></p> unicode symbol -->
                 </div>
             </form>
         </div>

@@ -23,7 +23,7 @@ window.addEventListener('load', () => {
             preloader.classList.add('preloader-swipe-up');
             page2.classList.add('preloader-swipe-up');
         }
-    }, 15);
+    }, 10);
 
     // start carsousel animation when section is in view
     // set a timer for this code to run
@@ -37,6 +37,30 @@ window.addEventListener('load', () => {
     observer.observe(document.getElementById('technologies'));
         }, 100);
 });
+
+// back to top button
+const backToTop = document.querySelector('.back-to-top');
+window.addEventListener('scroll', () => {
+    // height of webpage - viewport height / 2 to get halfway point
+    const halfway = (document.documentElement.scrollHeight - window.innerHeight) / 2;
+
+    if(window.scrollY > halfway) {
+        backToTop.classList.add('visible');
+    }
+    else {
+        backToTop.classList.remove('visible');
+    }
+});
+
+// clone content for carousel
+// const carousel = document.querySelector('.carousel');
+// const group = document.querySelector('.group');
+
+// // clone and append group
+// for(let i = 0; i < 6; i++) {
+//     const clone = group.cloneNode(true);
+//     carousel.appendChild(clone);
+// }
 
 // scroll animation for header
 window.addEventListener('scroll', () => {
@@ -105,20 +129,32 @@ window.addEventListener('scroll', () => {
 const marquee = document.getElementById('marquee');
 marquee.innerHTML += marquee.innerHTML;
 
-const navButton = document.getElementById('nav-toggle');
+const navButton = document.querySelector('#menu-icon');
+const crossBtn = document.querySelector('#cross-icon');
 const dropDown = document.getElementById('dropdown');
 
 // toggle dropdown on click of nav button
 navButton.addEventListener('click', (e) => {
+    // prevents event from travelling any further up or down the DOM tree
     e.stopPropagation();
     dropDown.classList.toggle('show');
-    console.log('clicked');
+    navButton.style.display = 'none';
+    crossBtn.style.display = 'block';
+});
+
+crossBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    dropDown.classList.remove('show');
+    crossBtn.style.display = 'none';
+    navButton.style.display = 'block';
 });
 
 // close dropdown when clicking a link
 dropDown.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
         dropDown.classList.remove('show');
+        crossBtn.style.display = 'none';
+        navButton.style.display = 'block';
     });
 });
 
@@ -126,6 +162,8 @@ dropDown.querySelectorAll('a').forEach(link => {
 document.addEventListener('click', (e) => {
     if(!navButton.contains(e.target) && !dropDown.contains(e.target)) {
         dropDown.classList.remove('show');
+        crossBtn.style.display = 'none';
+        navButton.style.display = 'block';
     }
 });
 
