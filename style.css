@@ -297,47 +297,45 @@ p {
     font-family: 'Cairo';
     line-height: 2;
 }
-/* Card flip animation */
-.card{
-    background-color: #F5F5F5;
-    border-radius: 0.5rem;
-    padding: 0.5rem;
-    transition: all 0.3s ease;
-    perspective: 62.5rem;
-    height: 15.625rem;
-    cursor: pointer;
-}
+    /* Card flip animation */
+    .card{
+        background-color: #F5F5F5;
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        transition: all 0.3s ease;
+        height: 15.625rem;
+        cursor: pointer;
+        perspective: 500px;
+    }
 
-/* inner wrapper that flips */
-.card-inner{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.6s ease-in-out;
-    transform-style: preserve-3d;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-}
-.card:hover .card-inner{
-    transform: rotateY(180deg);
-    box-shadow: 0rem 0.5rem 0.5rem #c4c4c4;
-}
-.card-front .card-back{
-    position: absolute;
-}
-.card-front{
-    z-index: 2;
-    background-color: #F5F5F5;
-    backface-visibility: hidden;
-}
-.card-back{
-    transform: rotateY(180deg);
-    z-index: 1;
-    backface-visibility: hidden;
-    text-align: center;
-}
+    /* inner wrapper that flips */
+    .card-inner{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.6s ease-in-out;
+        transform-style: preserve-3d;/* enables 3d space for children  */
+        padding: 1rem;
+    }
+    .card:hover .card-inner{
+        transform: rotateY(180deg);
+        box-shadow: 0rem 0.5rem 0.5rem #c4c4c4;
+    }
+    .card-front, .card-back{
+        position: absolute;
+        backface-visibility: hidden;
+        width: 100%;
+        height: auto;
+    }
+    .card-front{
+        z-index: 2;
+        background-color: #F5F5F5;
+    }
+    .card-back{
+        transform: rotateY(180deg);
+        z-index: 1;
+        text-align: center;
+    }
 
 /* QUOTE */
 #quote{
@@ -404,12 +402,12 @@ p {
 }
 .dots{
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 .dot{
     background-color: #555;
-    width: 0.3rem;
-    height: 0.3rem;
+    width: 0.6rem;
+    height: 0.6rem;
     border-radius: 50%;
 }
 .dot.active {

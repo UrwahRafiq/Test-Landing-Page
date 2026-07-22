@@ -1,0 +1,314 @@
+/* Global Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Variables */
+:root {
+    --primary-color: #55d6c2;
+    --dark-color: #2c3e50;
+    --light-bg: #f9f9f9;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: opacity 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* Layout Utilities */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* 1. Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+    color: #fff;
+    min-height: 550px;
+    padding-bottom: 80px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    font-size: 0.9rem;
+}
+
+.nav-links a {
+    color: #fff;
+    opacity: 0.8;
+}
+
+.nav-links a:hover {
+    opacity: 1;
+}
+
+.hero-content {
+    margin-top: 80px;
+}
+
+.hero-content h1 {
+    font-size: 2.8rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 0.95rem;
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+
+/* 2. Services Section */
+.services-section {
+    padding: 100px 0;
+}
+
+.large-letter {
+    font-size: 14rem;
+    color: var(--primary-color);
+    font-weight: 900;
+    line-height: 1;
+    text-align: center;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.service-item {
+    display: flex;
+    gap: 15px;
+}
+
+.service-icon {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    flex-shrink: 0;
+}
+
+.service-item h3 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #222;
+}
+
+.service-item p {
+    font-size: 0.8rem;
+    color: #777;
+}
+
+/* 3. Testimonial Section */
+.testimonial {
+    background-color: var(--light-bg);
+    padding: 60px 0;
+    text-align: center;
+    font-style: italic;
+}
+
+.testimonial blockquote {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.testimonial cite {
+    font-size: 0.85rem;
+    color: #888;
+    font-style: normal;
+}
+
+/* 4. Split Section */
+.split-section {
+    padding: 100px 0;
+}
+
+.split-image img, .placeholder-img-container {
+    width: 100%;
+    height: 350px;
+    background: url('https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80') center/cover;
+    border-radius: 4px;
+}
+
+.split-content .service-icon.large {
+    margin-bottom: 15px;
+}
+
+.split-content h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #222;
+}
+
+.split-content p {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 25px;
+}
+
+/* 5. Signup Section */
+.signup-section {
+    background-color: #fafafa;
+    padding: 80px 0;
+    text-align: center;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.signup-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.signup-section p {
+    font-size: 0.85rem;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.signup-form {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.signup-form input {
+    padding: 12px 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    flex: 1;
+    background: #fff;
+}
+
+/* 6. Logos Section */
+.logos-section {
+    background-color: var(--primary-color);
+    padding: 40px 0;
+}
+
+.logos-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+.logos-grid span {
+    font-size: 1.2rem;
+    margin-left: 8px;
+    font-weight: 600;
+}
+
+/* Footer */
+footer {
+    background-color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    width: 35px;
+    height: 35px;
+    background-color: var(--primary-color);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    transition: opacity 0.3s;
+}
+
+.social-icons a:hover {
+    opacity: 0.8;
+}
+
+.copyright {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .grid-2, .services-list, .signup-form {
+        grid-template-columns: 1fr;
+    }
+    .nav-links {
+        display: none;
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+}
